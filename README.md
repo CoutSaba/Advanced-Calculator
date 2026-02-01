@@ -1,4 +1,4 @@
-# 🔢 Advanced Calculator
+# 🔢 Advanced Calculator In C++
 
 # 🧮 What The Project Does
 This calculator is a console-based application and it serves as multi-functional, <br>
