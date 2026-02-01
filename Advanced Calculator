@@ -1,1 +1,63 @@
+#include <iostream>
+#include <cmath>
+#include <string>
 
+using namespace std;
+
+void showMenu() {
+    cout << "\n--- Advanced Calculator ---\n";
+    cout << "1. Addition (+)\n2. Subtraction (-)\n3. Multiplication (*)\n4. Division (/)\n";
+    cout << "5. Square Root (sqrt)\n6. Power (pow)\n7. Sine (sin)\n8. Cosine (cos)\n0. Exit\n";
+    cout << "Enter choice: ";
+}
+
+int main() {
+    int choice;
+    double num1, num2;
+
+    while (true) {
+        showMenu();
+        cin >> choice;
+
+        if (choice == 0) break;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter two numbers: "; cin >> num1 >> num2;
+                cout << "Result: " << num1 + num2 << endl;
+                break;
+            case 2:
+                cout << "Enter two numbers: "; cin >> num1 >> num2;
+                cout << "Result: " << num1 - num2 << endl;
+                break;
+            case 3:
+                cout << "Enter two numbers: "; cin >> num1 >> num2;
+                cout << "Result: " << num1 * num2 << endl;
+                break;
+            case 4:
+                cout << "Enter two numbers: "; cin >> num1 >> num2;
+                if (num2 != 0) cout << "Result: " << num1 / num2 << endl;
+                else cout << "Error: Division by zero!" << endl;
+                break;
+            case 5:
+                cout << "Enter number: "; cin >> num1;
+                cout << "Result: " << sqrt(num1) << endl;
+                break;
+            case 6:
+                cout << "Enter base and exponent: "; cin >> num1 >> num2;
+                cout << "Result: " << pow(num1, num2) << endl;
+                break;
+            case 7:
+                cout << "Enter angle in radians: "; cin >> num1;
+                cout << "Result: " << sin(num1) << endl;
+                break;
+            case 8:
+                cout << "Enter angle in radians: "; cin >> num1;
+                cout << "Result: " << cos(num1) << endl;
+                break;
+            default:
+                cout << "Invalid choice!" << endl;
+        }
+    }
+    return 0;
+}
